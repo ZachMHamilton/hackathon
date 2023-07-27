@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Emoji Replacer",
+    "description": "Replaces certain words with emojies",
+    "version": "1.0",
+    "permissions": [
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": "devilemoji.png"
+    },
+    "content_scripts":[
+      {
+        "matches":["https://*/*"],
+        "js":["main.js"],
+        "all_frames": true,
+        "run_at": "document_end"
+      }
+    ]
+  }
